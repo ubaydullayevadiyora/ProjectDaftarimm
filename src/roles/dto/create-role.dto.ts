@@ -1,6 +1,6 @@
 import { IsString, IsNotEmpty, MaxLength } from "class-validator";
 
-export class CreateTypesDto {
+export class CreateRoleDto {
   @IsString({ message: "Name matn bolishi kerak." })
   @IsNotEmpty({ message: "Name maydoni bosh bolmasligi kerak." })
   @MaxLength(50, { message: "Name 50 belgidan uzun bolmasligi kerak." })
