@@ -1,11 +1,20 @@
+import { ApiProperty } from "@nestjs/swagger";
 import { IsString, IsNotEmpty, MaxLength } from "class-validator";
 
 export class CreateTypesDto {
+  @ApiProperty({
+    example: "name",
+    description: "type nomi",
+  })
   @IsString({ message: "Name matn bolishi kerak." })
   @IsNotEmpty({ message: "Name maydoni bosh bolmasligi kerak." })
   @MaxLength(50, { message: "Name 50 belgidan uzun bolmasligi kerak." })
   name: string;
 
+  @ApiProperty({
+    example: "tavsif",
+    description: "type tavsifi",
+  })
   @IsString({ message: "Description matn bolishi kerak." })
   @IsNotEmpty({ message: "Description maydoni bosh bolmasligi kerak." })
   @MaxLength(255, {
