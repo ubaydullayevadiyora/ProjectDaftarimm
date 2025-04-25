@@ -5,9 +5,9 @@ import {
   UnauthorizedException,
 } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
-import { CreateAdminDto } from "src/admins/dto/create-admin.dto";
-import { Admin } from "src/admins/model/admin.model";
-import { AdminsService } from "src/admins/admins.service";
+import { CreateAdminDto } from "../admins/dto/create-admin.dto";
+import { Admin } from "../admins/model/admin.model";
+import { AdminsService } from "../admins/admins.service";
 import { SignInDto } from "./dto/sign-in.dto";
 import * as bcrypt from "bcrypt";
 

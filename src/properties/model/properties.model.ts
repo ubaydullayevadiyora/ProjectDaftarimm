@@ -1,6 +1,6 @@
 import { BelongsToMany, Column, DataType, Model, Table } from "sequelize-typescript";
-import { BlockProperties } from "src/block_properties/model/block_properties.model";
-import { Block } from "src/blocks/model/block.model";
+import { BlockProperties } from "../../block_properties/model/block_properties.model";
+import { Block } from "../../blocks/model/block.model";
 
 interface IPropertiesCreationAttr {
   name: string;

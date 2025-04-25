@@ -1,7 +1,7 @@
 import { BelongsTo, BelongsToMany, Column, DataType, ForeignKey, HasMany, Model, Table } from "sequelize-typescript";
-import { BlockProperties } from "src/block_properties/model/block_properties.model";
-import { Properties } from "src/properties/model/properties.model";
-import { Type } from "src/typees/model/types.model";
+import { BlockProperties } from "../../block_properties/model/block_properties.model";
+import { Properties } from "../../properties/model/properties.model";
+import { Type } from "../../typees/model/types.model";
 
 interface IBlockCreationAttr {
   typeId: number;

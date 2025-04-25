@@ -1,5 +1,5 @@
 import { Column, DataType, HasMany, Model, Table } from "sequelize-typescript";
-import { Block } from "src/blocks/model/block.model";
+import { Block } from "../../blocks/model/block.model";
 
 interface ITypeCreationAttr {
   name: string;

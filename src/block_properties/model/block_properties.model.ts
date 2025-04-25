@@ -1,6 +1,6 @@
-import { Column, DataType, ForeignKey, Model, Table } from "sequelize-typescript";
-import { Block } from "src/blocks/model/block.model";
-import { Properties } from "src/properties/model/properties.model";
+import { BelongsTo, Column, DataType, ForeignKey, Model, Table } from "sequelize-typescript";
+import { Block } from "../../blocks/model/block.model";
+import { Properties } from "../../properties/model/properties.model";
 
 interface IBlockPropertiesCreationAttr {
   blockId: number;
@@ -23,4 +23,10 @@ export class BlockProperties extends Model<
 
   @Column(DataType.STRING)
   value: string;
+
+  @BelongsTo(() => Block)
+  block: Block;
+
+  @BelongsTo(() => Properties)
+  property: Properties;
 }

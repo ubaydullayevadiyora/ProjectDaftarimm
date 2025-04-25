@@ -15,6 +15,7 @@ import { Role } from "./roles/model/role.model";
 import { UsersModule } from "./users/users.module";
 import { AdminsModule } from "./admins/admins.module";
 import { RolesModule } from "./roles/roles.module";
+import { FileModule } from './file/file.module';
 
 @Module({
   imports: [
@@ -37,7 +38,8 @@ import { RolesModule } from "./roles/roles.module";
     PropertiesModule,
     UsersModule,
     AdminsModule,
-    RolesModule
+    RolesModule,
+    FileModule
   ],
   controllers: [],
   providers: [],
