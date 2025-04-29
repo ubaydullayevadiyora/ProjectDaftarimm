@@ -1,8 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/sequelize";
-import { GroupMember } from "./model/block.model";
+import { GroupMember } from "./model/groupMember.model";
 import { CreateGroupMemberDto } from "./dto/create-group-member.dto";
-
 
 @Injectable()
 export class GroupMembersService {

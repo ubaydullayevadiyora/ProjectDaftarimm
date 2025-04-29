@@ -1,4 +1,4 @@
 import { PartialType } from "@nestjs/mapped-types";
-import { CreateBlockDto } from "./create-workspace-member.dto";
+import { CreateWorkspaceMemberDto } from "./create-workspace-member.dto";
 
-export class UpdateBlockDto extends PartialType(CreateBlockDto) {}
+export class UpdateWorkspaceMemberDto extends PartialType(CreateWorkspaceMemberDto) {}

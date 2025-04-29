@@ -1,7 +1,6 @@
 import { Controller, Post, Get, Body, Delete, Query } from "@nestjs/common";
-import { GroupMembersService } from "./blocks.service";
+import { GroupMembersService } from "./groupMember.service";
 import { CreateGroupMemberDto } from "./dto/create-group-member.dto";
-
 
 @Controller("group-members")
 export class GroupMembersController {

@@ -8,20 +8,19 @@ import {
   ForeignKey,
   BelongsTo,
 } from "sequelize-typescript";
-import {
-  CreationOptional,
-  InferAttributes,
-  InferCreationAttributes,
-} from "sequelize";
+
 import { User } from "../../users/model/user.model";
 import { Block } from "../../blocks/model/block.model";
 
+interface ICommentCreationAttr {
+  content: string;
+  user_id: number;
+  block_id: number;
+  is_edited:boolean;
+}
 
 @Table({ tableName: "comments" })
-export class Comment extends Model<
-  InferAttributes<Comment>,
-  InferCreationAttributes<Comment>
-> {
+export class Comment extends Model<Comment, ICommentCreationAttr> {
   @Column({ type: DataType.TEXT, allowNull: false })
   content: string;
 
@@ -34,7 +33,7 @@ export class Comment extends Model<
   block_id: number;
 
   @Column({ type: DataType.BOOLEAN, allowNull: false, defaultValue: false })
-  is_edited: CreationOptional<boolean>;
+  is_edited: boolean;
 
   @BelongsTo(() => User)
   user: User;
